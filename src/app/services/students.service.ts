@@ -9,12 +9,12 @@ export class StudentsService {
 
   constructor() { }
 
-  getStudents(): Observable<any[]>{
+  getStudents(): Observable<any[]> {
     return Observable.of(Students).delay(100);
   }
-  getColumns(): string[]{
+  getColumns(): string[] {
     return ["firstName", "lastName", "dob", "college", "branch", "university", "city", "address"]
   };
-  
+
 
 }

@@ -1,17 +1,36 @@
 <div class="container">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()"> 
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label>Email:</label>
-          <input type="email" class="form-control" formControlName="email" placeholder="user@email.com" autofocus="autofocus" required>
+          <input #email type="email" class="form-control" formControlName="email" placeholder="user@email.com" autofocus="autofocus" required>
         </div>
         <div class="form-group">
           <label>Password:</label>
-          <input type="password" class="form-control" formControlName="password" required> 
+          <input #password type="password" class="form-control" formControlName="password" required>
         </div>
         <div>
             <button type="submit" class="std-button">Login</button>
             <button type="reset" class="std-button">Reset</button>
         </div>
-        
+
       </form>
 </div>
+
+<!-- <form name="loginForm" novalidate>
+          <div class="form-group">
+
+
+            <label class="font-weight-bold text-primary">User Name</label>
+            <input #username    type="text"  class="form-control" placeholder="Enter username" autofocus="true"
+              autocomplete="off" required>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-bold text-primary">Password</label>
+            <input   type="password" #password class="form-control" placeholder="Enter password"
+              required>
+          </div>
+          <div class="form-group">
+            <a type="button"  (click)="doLogin(username.value,password.value)" class="btn btn-primary btn-xs mr-auto ml-3"   role="button" aria-pressed="true">Login</a>
+            <a type="button" href="#" class="btn btn-primary btn-xs mr-auto ml-3" role="button" aria-pressed="true">Cancel</a>
+          </div>
+        </form> -->

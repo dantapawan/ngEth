@@ -10,7 +10,7 @@
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: #ffdeeb;
     overflow:auto;
-    
+
 }
 
 label {
@@ -28,9 +28,8 @@ file{
     text-decoration: none;
     border-radius: 12px;
     width: 100px;
-    display: inline-block; 
+    display: inline-block;
 
 }
 
 
-  

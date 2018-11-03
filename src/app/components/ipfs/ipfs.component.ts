@@ -20,8 +20,8 @@ export class IpfsComponent implements OnInit {
   _fileHashCode: any;
   _txnCode: any;
   _imgSrc: string;
-  _txnInputData: any; 
- 
+  _txnInputData: any;
+
 
   studentForm = new FormGroup(
 		{
@@ -41,9 +41,9 @@ export class IpfsComponent implements OnInit {
     private _ipfsService: IpfsService,
     private _ethContractService: EthService,
     private route: ActivatedRoute
-    
-  ) { 
-    
+
+  ) {
+
   }
 
   ngOnInit() {
@@ -53,39 +53,38 @@ export class IpfsComponent implements OnInit {
       this.studentForm.controls['branch'].setValue(params._branch);
       this.studentForm.controls['college'].setValue(params._college);
       this.studentForm.controls['university'].setValue(params._university);
-      
+
     });
   }
 
-  public onFileSelected(event) {    
+  public onFileSelected(event) {
     this._fileToUpload = event.target.files[0];
-    console.log(this._fileHashCode);    
+    console.log(this._fileHashCode);
   }
 
   public upload() {
      this._ipfsService.uploadFileToIPFS(this._fileToUpload)
-     .then(result => this._fileHashCode = result); 
+     .then(result => this._fileHashCode = result);
   }
 
-  public storeIpfsCode(ipfsHashCode: string){
+  public storeIpfsCode(ipfsHashCode: string) {
     console.log('ipfs', ipfsHashCode);
     this._ethContractService.storeIpfsCode(ipfsHashCode)
-    .then(result => this._txnCode = result);    
+    .then(result => this._txnCode = result);
   }
 
-  public getTransactionInputData(txnCode: string){
+  public getTransactionInputData(txnCode: string) {
     this._ethContractService.getTransactionInputData(txnCode)
     .then(result => this._txnInputData = result);
   }
 
-  public downloadfile(_txnInputData: string){
+  public downloadfile(_txnInputData: string) {
     console.log('Image data', _txnInputData);
-    this._imgSrc="https://ipfs.io/ipfs/"+_txnInputData;
-    
+    this._imgSrc = ' https://ipfs.io/ipfs/' + _txnInputData;
   }
 
   public onSubmit() {
-    
+
   }
 
 }

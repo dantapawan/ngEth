@@ -4,8 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule }        from './app-routing.module';
-import {MetaModule} from './meta/meta.module';
+import { AppRoutingModule } from './app-routing.module';
+import { MetaModule } from './meta/meta.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -28,6 +28,11 @@ import { EthService } from './services/eth.service';
 import { MainComponent } from './components/main/main.component';
 import { StudentsService } from './services/students.service';
 import { StudentSearchComponent } from './components/student-search/student-search.component';
+import { GraduatesComponent } from './components/graduates/graduates.component';
+import { RecruitersComponent } from './components/recruiters/recruiters.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -39,7 +44,12 @@ import { StudentSearchComponent } from './components/student-search/student-sear
     IpfsComponent,
     HomeComponent,
     MainComponent,
-    StudentSearchComponent
+    StudentSearchComponent,
+    GraduatesComponent,
+    RecruitersComponent,
+    RegisterComponent,
+    ContactusComponent,
+    AboutComponent
   ],
   imports: [
     BrowserAnimationsModule,

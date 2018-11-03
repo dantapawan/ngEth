@@ -1,0 +1,40 @@
+.container {
+  margin-top: 150px;
+
+}
+
+.thead-color {
+  color: #ab1f5d;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #ffdeeb;
+  overflow:auto;
+
+}
+
+label {
+  color: gray;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+.std-button {
+  background-color: #ab1f5d;
+  width: 200px;
+}
+
+file{
+  background-color: #ab1f5d;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  text-decoration: none;
+  border-radius: 12px;
+  width: 100px;
+  display: inline-block;
+
+}
+
+

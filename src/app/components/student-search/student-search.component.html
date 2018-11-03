@@ -1,7 +1,7 @@
-<div class="container"> 
+<div class="container">
 
   <div class="row" style="height: 300px">
-      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-md-12"> 
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-md-12">
           <div class="form-group col-md-2" >
             <label>First Name:</label>
             <input type="text" class="form-control" formControlName="firstName"  required>
@@ -14,11 +14,9 @@
               <button type="submit" class="std-button">Search</button>
               <button type="reset" class="std-button">Reset</button>
           </div>
-          
         </form>
-
   </div>
-    <div class="row">
+  <div class="row">
         <table class="table table-hover">
           <thead class="thead-color">
             <tr>
@@ -33,10 +31,7 @@
                     {{char[col]}}
                   </td>
                 </tr>
-          </tbody>  
-            
+          </tbody>
           </table>
-
-      
     </div>
 <div>
