@@ -1,20 +1,119 @@
 <div class="container">
-  <div class="row columns">
-    <label>Please select registration type: </label>&nbsp;
-    <select>
-      <option *ngFor="let actor of actors" value={{actor}}>
-        {{ actor }}
-      </option>
+    <h1>Sign Up</h1>
+   <div class="row">
+    <label for='roleSelect'>Please select registration type: </label>&nbsp;
+    <select [(ngModel)]="selectedRole" (change)="onRoleSlected($event)">
+         <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
     </select>
   </div>
   <br>
   <hr>
+  <div class="row" id="graduates" *ngIf="selectedRole == 1">
+      <h4>Sign up as Graduate by providing below details</h4><br>
+    <form #abc="ngForm" ngSubmit="onSubmit()" class="col-md-12">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="">First Name</label>
+              <input type="text " class="form-control col-10" name="firstname" id="1">
+            </div>
+            <div class="form-group">
+              <label for="">Last Name</label>
+              <input type="text " class="form-control col-10" name="lastname" id="2">
+            </div>
+            <div class="form-group">
+              <label for="">Institution/University</label>
+              <input type="text " class="form-control col-10" name="institution" id="3">
+            </div>
+            <div class="form-group">
+              <label for="">Email-Id</label>
+              <input type="text" class="form-control col-10" name="emailid" id="4">
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input type="text " class="form-control col-10" name="phonenumber" id="5">
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input type="password " class="form-control col-10" name="password" id="6">
+            </div>
+            <div class="form-group">
+              <label for="">Confirm Password</label>
+              <input type="text" class="form-control col-10" name="confirmpassword" id="7">
+            </div>
+            <div class="form-group">
+            <button type="submit" class="form-control col-5">Register</button>
+            </div>
+          </div>
 
-
-  <div class="row" id="graduates">
-
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="row" id="recruiters">
 
+  <div class="row" id="recruiters" *ngIf="selectedRole == 2">
+      <h4>Sign up as Recruitment Agency by providing below details</h4><br>
+    <form #abc="ngForm" ngSubmit="onSubmit()">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" class="form-control col-5" name="orgname" id="1">
+            </div>
+            <div class="form-group">
+              <label for="">Email-Id</label>
+              <input type="text" class="form-control col-5" name="emailid" id="2">
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input type="text" class="form-control col-5" name="phonenumber" id="3">
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input type="text" class="form-control col-5" name="password" id="4">
+            </div>
+            <div class="form-group">
+              <label for="">Confirm Password</label>
+              <input type="text" class="form-control col-5" name="confirmpassword" id="5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="row" id="institutions" *ngIf="selectedRole == 3">
+      <h4>Sign up as an Academic Institution by providing below details</h4><br>
+    <form #abc="ngForm" ngSubmit="onSubmit()">
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="">Name of university/code</label>
+              <input type="text" class="form-control col-5" name="institutionname" id="1">
+            </div>
+            <div class="form-group">
+              <label for="">Official MailId</label>
+              <input type="text" class="form-control col-5" name="offemailid" id="2">
+            </div>
+            <div class="form-group">
+              <label for="">Phonenumber</label>
+              <input type="text" class="form-control col-5" name="institutionphone" id="3">
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input type="password" class="form-control col-5" name="password" id="4">
+            </div>
+            <div class="form-group">
+              <label for="">Confirm Password</label>
+              <input type="text" class="form-control col-5" name="confirmpassword" id="5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
+

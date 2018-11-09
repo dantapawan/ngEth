@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { IpfsService } from '../../services/ipfs.service';
 import { EthService } from '../../services/eth.service';
+// tslint:disable-next-line:no-unused-expression
+// import { loading-spinner } from '../loading-spinner/loading-spinner.service';
 
-
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { from } from 'rxjs/observable/from';
+// import { LoadingSpinnerService } from '../loading-spinner/loading-spinner.service';
 
 
 @Component({
@@ -16,12 +19,12 @@ import { ActivatedRoute } from '@angular/router';
 
 
 export class IpfsComponent implements OnInit {
+
   _fileToUpload: File;
   _fileHashCode: any;
   _txnCode: any;
   _imgSrc: string;
   _txnInputData: any;
-
 
   studentForm = new FormGroup(
 		{
@@ -35,16 +38,7 @@ export class IpfsComponent implements OnInit {
       city: new FormControl('', Validators.required)
 		},
 		{ updateOn: 'submit' }
-	);
-
-  constructor(
-    private _ipfsService: IpfsService,
-    private _ethContractService: EthService,
-    private route: ActivatedRoute
-
-  ) {
-
-  }
+  );
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -57,13 +51,24 @@ export class IpfsComponent implements OnInit {
     });
   }
 
+  constructor(
+    private _ipfsService: IpfsService,
+    private _ethContractService: EthService,
+    private route: ActivatedRoute,
+    // private loading-spinnerservice: LoadingSpinnerService
+    ) {
+
+  }
+
+
+
   public onFileSelected(event) {
     this._fileToUpload = event.target.files[0];
     console.log(this._fileHashCode);
   }
 
   public upload() {
-     this._ipfsService.uploadFileToIPFS(this._fileToUpload)
+      this._ipfsService.uploadFileToIPFS(this._fileToUpload)
      .then(result => this._fileHashCode = result);
   }
 

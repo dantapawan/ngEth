@@ -9,6 +9,16 @@
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: #ffdeeb;
-    overflow:auto;
-    
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  display: block;
+  overflow: scroll;
 }

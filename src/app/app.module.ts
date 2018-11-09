@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MetaModule } from './meta/meta.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 import {
   MatButtonModule,
   MatCardModule,
@@ -33,6 +35,7 @@ import { RecruitersComponent } from './components/recruiters/recruiters.componen
 import { RegisterComponent } from './components/register/register.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutComponent } from './components/about/about.component';
+
 
 
 @NgModule({

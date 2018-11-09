@@ -44,22 +44,22 @@ export class EthService {
       var types = ['string'];
       var args = [ipfsHashCode];
       var fullName = functionName + '(' + types.join() + ')';
-      var signature = CryptoJS.SHA3(fullName,{outputLength:256}).toString(CryptoJS.enc.Hex).slice(0, 8);
-      var dataHex = signature + coder.encodeParams(types, args) ;
+      var signature = CryptoJS.SHA3(fullName, { outputLength: 256 }).toString(CryptoJS.enc.Hex).slice(0, 8);
+      var dataHex = signature + coder.encodeParams(types, args);
       var data = '0x' + dataHex;
 
       var nonce = this._web3.toHex(this._web3.eth.getTransactionCount(this._web3.eth.defaultAccount))
-      var gasPrice = this._web3.toHex(this._web3.eth.gasPrice)
+      var gasPrice = this._web3.toHex(this._web3.eth.gasPrice);
       var gasLimitHex = this._web3.toHex(300000);
       var rawTx = { 'nonce': nonce, 'gasPrice': gasPrice, 'gasLimit': gasLimitHex, 'from': this._web3.eth.defaultAccount, 'to': this._contractAddress, 'data': data}
-      var tx = new Tx(rawTx)
+      var tx = new Tx(rawTx);
       tx.sign(Buffer.from(this._privateKey, 'hex'));
-      var serializedTx = '0x'+tx.serialize().toString('hex')
+      var serializedTx = '0x' + tx.serialize().toString('hex');
       return this._web3.eth.sendRawTransaction(serializedTx, function(err, txHash){
-        if(err) {
+        if (err) {
           console.log(err);
           return reject(err);
-        } else{
+        } else {
           console.log(txHash);
           return resolve(txHash);
         }

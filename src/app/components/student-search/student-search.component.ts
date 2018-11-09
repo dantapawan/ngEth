@@ -15,12 +15,11 @@ export class StudentSearchComponent implements OnInit {
   _firstName: string;
 
   form = new FormGroup(
-		{
-			firstName: new FormControl('', [Validators.email, Validators.required]),
-			lastName: new FormControl('', Validators.required)
-		},
-		{ updateOn: 'submit' }
-	);
+{
+firstName: new FormControl('', [Validators.email, Validators.required]),
+lastName: new FormControl('', Validators.required)
+},
+{ updateOn: 'submit' });
 
   constructor(private _studentService: StudentsService
       , private _router: Router) { }

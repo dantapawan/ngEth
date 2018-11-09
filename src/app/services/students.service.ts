@@ -14,7 +14,7 @@ export class StudentsService {
   }
   getColumns(): string[] {
     return ["firstName", "lastName", "dob", "college", "branch", "university", "city", "address"]
-  };
+  }
 
 
 }

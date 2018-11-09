@@ -50,9 +50,53 @@ export const Students: any[] =
     dob: '2/5/84',
     college: 'GITAM',
     branch: 'IT',
-    university:'Andhra',
+    university: 'Andhra',
     city: 'Visakhapatnam',
-    address:'rushikonda, visakhapatnam'
+    address: 'rushikonda, visakhapatnam'
 
   }
-]
+  ,
+  {
+    firstName: 'Surya',
+    lastName: 'B',
+    dob: '2/7/84',
+    college: 'GITAM',
+    branch: 'IT',
+    university: 'Andhra',
+    city: 'Visakhapatnam',
+    address: 'rushikonda, visakhapatnam'
+  }
+  ,
+  {
+    firstName: 'Shyam',
+    lastName: 'G',
+    dob: '6/5/84',
+    college: 'JNTU',
+    branch: 'IT',
+    university: 'JNTU',
+    city: 'Hyderabad',
+    address: 'KPHB, Hyderabad'
+  },
+  {
+    firstName: 'Bhaskar',
+    lastName: 'M',
+    dob: '2/5/83',
+    college: 'OU',
+    branch: 'IT',
+    university: 'OU',
+    city: 'Hyderabad',
+    address: 'tarnaka, Hyderabad'
+
+  },
+  {
+    firstName: 'Raju',
+    lastName: 'S',
+    dob: '2/5/80',
+    college: 'OU',
+    branch: 'IT',
+    university: 'OU',
+    city: 'Hyderabad',
+    address: 'tarnaka, Hyderabad'
+
+  }
+];

@@ -28,6 +28,7 @@ export class IpfsService {
         });
       });
     });
+    console.log( 'Hash Result: ' + hashResult);
     return hashResult;
   }
 

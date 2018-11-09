@@ -1,13 +1,23 @@
 <div class="container">
 <div class="row">
-    <label for=""><h5>Please provide the hash code of certificate to be verified:</h5> </label>
+    <label for=""><h6>Please provide the hash code of certificate to be verified:</h6> </label>
+</div>
+<!-- <div class="row">
+    <label for="_txnInputData"> <h6><strong>Hash Code:</strong> </h6>  </label>
+    <input type="text" class="form-control col-md-2" formControlName="_txnInputData">
+    <button type="button" class="std-button" (click)='downloadfile(_txnInputData)'>Check for Validation</button>
 </div>
 <div class="row">
-    <label for="_txnCode"> <h5><strong>Hash Code:</strong> </h5>  </label>
-    <input type="text" class="form-control col-md-2" formControlName="hashCode">
-    <button type="button" class="std-button" (click)='checkForValidation()'>Check for Validation</button>
-</div>
-<div class="row">
-
+  <div class="row form-group">
+    <a class="btn btn-outline-success btn-xs ml-3" target="_blank" [href]="_imgSrc" [download]="_imgSrc"> Download File </a>
+  </div>
+</div> -->
+<div class="row form-group">
+    <label class="font-weight-bold"><h6><strong>Certificate HashCode: </strong> </h6></label>&nbsp;
+    <input #documentHash type="text" class="form-control col-6" formControlName="documentHash" placeholder="document hash" required><br>
+  </div>
+<div class="row form-group">
+  <br>
+  <a class="btn btn-outline-success btn-xs ml-3" target="_blank" [href]="_imgSrc" [download]="_imgSrc"> Download File </a>
 </div>
 </div>
