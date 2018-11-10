@@ -1,7 +1,12 @@
 .row {
   margin: auto;
-  width: 50%;
   padding: 5px;
+  display: inline;
+}
+
+button {
+  background-color: #ab1f5d;
+  color: white;
 }
 
 h1 {
