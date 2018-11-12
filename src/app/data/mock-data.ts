@@ -1,6 +1,26 @@
 export const Students: any[] =
 [
   {
+    firstName: 'Surya Chandra',
+    lastName: 'B',
+    dob: '2/7/84',
+    college: 'University Of Hyderabad',
+    branch: 'CSE',
+    university: 'UOH',
+    city: 'Hyderabad',
+    address: 'Hyderabad'
+  },
+  {
+    firstName: 'Dharmik',
+    lastName: 'Dudi',
+    dob: '2/7/84',
+    college: 'University Of Hyderabad',
+    branch: 'CSE',
+    university: 'UOH',
+    city: 'Hyderabad',
+    address: 'Hyderabad'
+  },
+  {
     firstName: 'John',
     lastName: 'Rob',
     dob: '22/6/81',
@@ -9,7 +29,6 @@ export const Students: any[] =
     university:'Andhra',
     city: 'Visakhapatnam',
     address:'rushikonda, visakhapatnam'
-
   },
   {
     firstName: 'Raj',
@@ -19,8 +38,7 @@ export const Students: any[] =
     branch: 'IT',
     university:'Andhra',
     city: 'Visakhapatnam',
-    address:'rushikonda, visakhapatnam'
-
+    address: 'visakhapatnam'
   },
   {
     firstName: 'Suresh',
@@ -28,10 +46,9 @@ export const Students: any[] =
     dob: '2/12/80',
     college: 'GITAM',
     branch: 'IT',
-    university:'Andhra',
+    university: 'Andhra',
     city: 'Visakhapatnam',
-    address:'rushikonda, visakhapatnam'
-
+    address: 'Visakhapatnam'
   },
   {
     firstName: 'Rajesh',
@@ -39,10 +56,9 @@ export const Students: any[] =
     dob: '01/6/85',
     college: 'GITAM',
     branch: 'IT',
-    university:'Andhra',
+    university: 'Andhra',
     city: 'Visakhapatnam',
-    address:'rushikonda, visakhapatnam'
-
+    address: 'rushikonda, visakhapatnam'
   },
   {
     firstName: 'Ravi',
@@ -53,20 +69,7 @@ export const Students: any[] =
     university: 'Andhra',
     city: 'Visakhapatnam',
     address: 'rushikonda, visakhapatnam'
-
-  }
-  ,
-  {
-    firstName: 'Surya',
-    lastName: 'B',
-    dob: '2/7/84',
-    college: 'GITAM',
-    branch: 'IT',
-    university: 'Andhra',
-    city: 'Visakhapatnam',
-    address: 'rushikonda, visakhapatnam'
-  }
-  ,
+  },
   {
     firstName: 'Shyam',
     lastName: 'G',
@@ -86,7 +89,6 @@ export const Students: any[] =
     university: 'OU',
     city: 'Hyderabad',
     address: 'tarnaka, Hyderabad'
-
   },
   {
     firstName: 'Raju',
@@ -97,6 +99,5 @@ export const Students: any[] =
     university: 'OU',
     city: 'Hyderabad',
     address: 'tarnaka, Hyderabad'
-
   }
 ];

@@ -13,8 +13,8 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickMe() {
-    this.router.navigateByUrl('/login');
-  }
+  // onClickMe() {
+  //   this.router.navigateByUrl('/login');
+  // }
 
 }

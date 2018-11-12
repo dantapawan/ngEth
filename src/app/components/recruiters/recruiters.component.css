@@ -1,5 +1,5 @@
 .container {
-  margin-top: 150px;
+  margin-top: 50px;
 
 }
 
@@ -11,6 +11,10 @@
   background-color: #ffdeeb;
   overflow:auto;
 
+}
+
+h6 {
+  color: #ab1f5d;
 }
 
 label {

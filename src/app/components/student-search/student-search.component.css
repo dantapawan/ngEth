@@ -1,24 +1,20 @@
 .container {
-    margin-top: 50px;
-
+  margin-top: 50px;
 }
 
 .thead-color {
-    color: #ab1f5d;
+  color: #ab1f5d;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    background-color: #ffdeeb;
+h5 {
+  color: #ab1f5d;
 }
 
-thead,
-tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th  {
+  background-color: #ffdeeb;
+  overflow:auto;
 }
 
 tbody {
-  display: block;
-  overflow: scroll;
+  overflow-y: scroll;
 }

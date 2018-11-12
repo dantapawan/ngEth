@@ -32,4 +32,7 @@ export class RegisterComponent implements OnInit {
       this.roleSelectedOption = 'Institutions';
     }
   }
+  onSubmit() {
+
+  }
 }

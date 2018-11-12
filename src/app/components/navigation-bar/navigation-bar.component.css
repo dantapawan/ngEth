@@ -1,5 +1,5 @@
 .navbar {
-    background-color: white;
+    background-color: whitesmoke;
 }
 .nav-link{
     color: #ab1f5d;
@@ -13,10 +13,14 @@
     font-family: "Raleway", sans-serif;
     font-size: 16px;
     background-color: #ab1f5d;
-    
+
 
 }
 .dropdown-menu {
     background-color: #ab1f5d;
-
 }
+
+.navbar-brand {
+  color: #ab1f5d;
+}
+

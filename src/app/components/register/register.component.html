@@ -1,6 +1,5 @@
 <div class="container">
-    <h1>Sign Up</h1>
-   <div class="row">
+  <div class="row">
     <label for='roleSelect'>Please select registration type: </label>&nbsp;
     <select [(ngModel)]="selectedRole" (change)="onRoleSlected($event)">
          <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
@@ -11,7 +10,7 @@
   <div class="row" id="graduates" *ngIf="selectedRole == 1">
       <h4>Sign up as Graduate by providing below details</h4><br>
       <h6>Already a member? <a href="http://localhost:4200/login">Sign in to EduC</a></h6><br>
-    <form #abc="ngForm" ngSubmit="onSubmit()" class="col-md-12">
+    <form #abc="ngForm" (ngSubmit)="onSubmit()" class="col-md-12">
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
@@ -44,10 +43,9 @@
               <input type="text" class="form-control col-10" name="confirmpassword" id="7">
             </div>
             <div class="form-group col-sm-2">
-            <button type="submit" class="form-control">Register</button>
+             <button class="btn btn-primary" type="submit"  [disabled]="!abc.valid">Register</button>
             </div>
           </div>
-
         </div>
       </div>
     </form>
@@ -56,7 +54,7 @@
   <div class="row" id="recruiters" *ngIf="selectedRole == 2">
       <h4>Sign up as Recruitment Agency by providing below details</h4><br>
       <h6>Already a member? <a href="http://localhost:4200/login">Sign in to EduC</a></h6><br>
-    <form #abc="ngForm" ngSubmit="onSubmit()">
+    <form #abc="ngForm" (ngSubmit)="onSubmit()">
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
@@ -81,7 +79,7 @@
               <input type="text" class="form-control" name="confirmpassword" id="5">
             </div>
             <div class="form-group col-sm-2">
-              <button type="submit" class="form-control">Register</button>
+              <button class="btn btn-primary" type="submit" [disabled]="!abc.valid">Register</button>
             </div>
           </div>
         </div>
@@ -92,7 +90,7 @@
   <div class="row" id="institutions" *ngIf="selectedRole == 3">
       <h4>Sign up as an Academic Institution by providing below details</h4><br>
       <h6>Already a member? <a href="http://localhost:4200/login">Sign in to EduC</a></h6><br>
-    <form #abc="ngForm" ngSubmit="onSubmit()">
+    <form #abc="ngForm" (ngSubmit)="onSubmit()">
       <div class="card-deck">
         <div class="card">
           <div class="card-body">
@@ -117,13 +115,12 @@
               <input type="text" class="form-control" name="confirmpassword" id="5">
             </div>
             <div class="form-group col-sm-2">
-              <button type="submit" class="form-control">Register</button>
+              <button class="btn btn-primary" type="submit"  [disabled]="!abc.valid">Register</button>
             </div>
           </div>
         </div>
       </div>
     </form>
   </div>
-
 </div>
 

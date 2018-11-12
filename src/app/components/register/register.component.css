@@ -1,3 +1,7 @@
+.container {
+  margin-top: 20px;
+}
+
 .row {
   margin: auto;
   padding: 5px;
@@ -9,7 +13,7 @@ button {
   color: white;
 }
 
-h1 {
-  align-content : center;
+label {
+  color: #ab1f5d;
 }
 

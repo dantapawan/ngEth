@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-recruiters',
@@ -8,39 +8,18 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class RecruitersComponent implements OnInit {
 
-   _imgSrc: any;
+   _imgSrc = '';
+   _txnInputData = '';
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
-  // tslint:disable-next-line:member-ordering
-  submitted = false;
-
-  // tslint:disable-next-line:member-ordering
-  form = new FormGroup(
-    {
-      documentHash: new FormControl('', [Validators.required])
-    },
-    { updateOn: 'submit' }
-  );
-
-  onSubmit() {
-    this.submitted = true;
-    if (this.form.invalid) {
-      return;
-    }
+ public downloadfile() {
+      this._imgSrc = 'https://ipfs.io/ipfs/' + this._txnInputData;
   }
-  // public getTransactionInputData(txnCode: string) {
-  //   this._ethContractService.getTransactionInputData(txnCode)
-  //   .then(result => this._txnInputData = result);
-  // }
-
-  // public downloadfile(documentHash: string) {
-  //   console.log('Image data', _documentHash);
-  //   this._imgSrc = 'https://ipfs.io/ipfs/' + _documentHash;
-  // }
 
 
 

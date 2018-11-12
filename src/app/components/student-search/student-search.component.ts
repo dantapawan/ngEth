@@ -15,11 +15,16 @@ export class StudentSearchComponent implements OnInit {
   _firstName: string;
 
   form = new FormGroup(
-{
-firstName: new FormControl('', [Validators.email, Validators.required]),
-lastName: new FormControl('', Validators.required)
-},
-{ updateOn: 'submit' });
+    {
+      firstName: new FormControl('', [Validators.email, Validators.required]),
+      lastName: new FormControl('', Validators.required),
+      dob: new FormControl('', Validators.required),
+      branch: new FormControl('', Validators.required),
+      collage: new FormControl('', Validators.required),
+      address: new FormControl('', Validators.required)
+    },
+    { updateOn: 'submit' }
+  );
 
   constructor(private _studentService: StudentsService
       , private _router: Router) { }
@@ -31,7 +36,7 @@ lastName: new FormControl('', Validators.required)
 
   public selectedStudent(student: any) {
     this._router.navigate(['ipfs', {_firstName: student.firstName, _lastName: student.lastName, _dob: student.dob, _college: student.college
-                          , _university: student.university}]);
+                          , _university: student.university, _branch: student.branch,_collage: student.collage,_address: student.address}]);
 
 
   }

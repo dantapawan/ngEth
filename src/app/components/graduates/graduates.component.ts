@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+// import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-graduates',
@@ -8,33 +8,58 @@ import { FormGroup } from '@angular/forms';
 })
 export class GraduatesComponent implements OnInit {
 
-  firstName: any;
-  middleName: any;
-  lastName: any;
-  branch: any;
-  college: any;
-  address: any;
-  university: any;
 
+  _imgSrc = '';
+  _txnInputData = '';
 
+ constructor() { }
 
-  constructor() {
+ ngOnInit() {
 
-    this.firstName = 'firstnamedummy';
-    this.middleName = 'lastnamedummy';
-    this.lastName = 'lastNamedummy';
-    this.branch = 'branchdummy';
-    this.college = 'collegedummy';
-    this.address = 'addressdummy';
-    this.university = 'universitydummy';
+ }
 
-  }
-
-
-  ngOnInit() {
-
-
-  }
-
+public downloadfile() {
+     this._imgSrc = 'https://ipfs.io/ipfs/' + this._txnInputData;
+}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // firstName: any;
+  // middleName: any;
+  // lastName: any;
+  // branch: any;
+  // college: any;
+  // address: any;
+  // university: any;
+
+
+
+  // constructor() {
+
+  //   this.firstName = 'firstnamedummy';
+  //   this.middleName = 'lastnamedummy';
+  //   this.lastName = 'lastNamedummy';
+  //   this.branch = 'branchdummy';
+  //   this.college = 'collegedummy';
+  //   this.address = 'addressdummy';
+  //   this.university = 'universitydummy';
+
+  // }
+
+
+
+
+
+
