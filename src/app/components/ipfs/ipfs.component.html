@@ -55,8 +55,8 @@
         <label for="_fileHashCode">Hash Code : </label> {{ _fileHashCode }}
       </div>
       <br />
-      <div *ngIf=" _fileHashCode  != null">
-        <button type="button" style="width: 200px;" class="std-button" (click)="storeIpfsCode(_fileHashCode)">Send to
+      <div *ngIf=" _fileHashCode  == null">
+        <button type="button" style="width: 200px;" class="std-button" (click)="createStudentContract(_fileHashCode)">Send to
           BlockChain </button>
       </div>
       <br />

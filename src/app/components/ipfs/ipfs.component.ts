@@ -78,6 +78,18 @@ export class IpfsComponent implements OnInit {
     .then(result => this._txnCode = result);
   }
 
+
+  public createStudentContract(ipfsHashCode: string) {    
+    this._ethContractService.createSudentCertificate(ipfsHashCode
+      , this.studentForm.value.university
+      , this.studentForm.value.firstName
+      , this.studentForm.value.firstName
+      , this.studentForm.value.lastName  
+      , this.studentForm.value.middleName)
+    .then(result => this._txnCode = result);
+
+  }
+
   public getTransactionInputData(txnCode: string) {
     this._ethContractService.getTransactionInputData(txnCode)
     .then(result => this._txnInputData = result);
